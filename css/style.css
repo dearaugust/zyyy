@@ -1,0 +1,193 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	list-style: none;
+}
+/*html5*/
+/*article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block};*/
+.clearfix:before,
+.clearfix:after{
+	content: " "; /*内容为“ ”就是一个英文的句号而已。也可以不写。*/
+	display: block;   /*加入的这个元素转换为块级元素。*/
+	clear: both;     /*清除左右两边浮动。*/
+	visibility: hidden; /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+	line-height: 0;    /*行高为0；*/
+	height: 0;     /*高度为0；*/
+	font-size:0;    /*字体大小为0；*/
+}
+.clearfix { *zoom:1;}   /*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+body {
+  -webkit-font-family: "微软雅黑";
+	font-size: 14px;
+}
+.wrap{
+  /*display: flex;*/
+  /*height:100vh;*/
+  /*background-color: #F5F5F5;*/
+	/*overflow: auto;*/
+}
+/* header 开始 */
+header {
+  width: 100vw;
+  line-height: 9vh;
+  text-align: center;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+}
+header > img {
+  max-width: 30vw;
+  vertical-align: middle;
+}
+header div {
+	float: right;
+	margin-right: 2vw;
+}
+header div img {
+	vertical-align: middle;
+	max-width: 8vw;
+}
+/* header 结束 */
+
+/* 轮播图 开始 */
+.swiper-container {
+	width: 100vw;
+}
+.swiper-slide {
+	position: relative;
+}
+.swiper-slide img {
+	max-width: 100vw;
+}
+.swiper-slide a {
+	display: block;
+	width: 33vw;
+	height: 5vh;
+	position: absolute;
+	bottom: 2vh;
+	right: 5vw;
+	border: 1px solid red;
+}
+.banner_down img {
+	max-width: 100vw;
+}
+/* 轮播图 结束 */
+
+/* 内容 开始 */
+.main {
+	overflow: auto;
+}
+.main-down {
+	width: 100vw;
+	padding: 0 4vw;
+}
+.introduction {
+	margin: 1vh 0;
+}
+.introduction img {
+	max-width: 20vw;
+	float:left;
+	margin-right: 3vw;
+}
+/* 选项卡 开始*/
+.tab {
+	margin-bottom: 1vh;
+}
+.tab-up {
+	text-align: center;
+}
+.tab-up ul {
+	display: flex;
+	margin-left: -3vw;
+}
+.tab-up ul li {
+	width: 30vw;
+	margin-left: 3vw;
+	padding: 0.5vh 0;
+	flex-grow: 1;
+	background-color: #2e8ee1;
+}
+.tab-up ul li a {
+	color: white;
+}
+/* 产品 开始 */
+.goods {
+	margin-left: -3vw;
+	display: flex;
+	text-align: center;
+}
+.goods div {
+	flex-grow: 1;
+	border: 1vw solid #2e8ee1;
+	padding: 3vw;
+	margin-left: 3vw;
+}
+.goods div img {
+	max-width: 100%;
+}
+.goods div p {
+	width: 35vw;
+	border-top: 2px solid #2e8ee1;
+}
+/* 技术方案 开始 */
+.technology {
+	display: flex;
+	margin-left: -20vw;
+	margin: 1.5vh 0;
+}
+.technology div {
+	flex-grow: 1;
+	margin-left: 2vw;
+}
+.technology div img {
+	max-width: 100%;
+}
+.technology div h2 {
+	font-size: 1.2rem;
+	color: #165aa6;
+}
+/* 内容 结束 */
+/* footer 开始 */
+footer {
+  width: 100vw;
+  background-color: #2750a2;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  flex-grow: 1;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: url('../images/footer_12.png') no-repeat right center;
+}
+footer ul li:last-child {
+  background: none;
+}
+footer ul li a {
+}
+footer img {
+  width: 12vw;
+  position: relative;
+  top: -1.5vh;
+}
